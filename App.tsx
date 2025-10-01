@@ -8,7 +8,6 @@ import ExteriorDetailingPage from './pages/ExteriorDetailingPage';
 import InteriorRestorationPage from './pages/InteriorRestorationPage';
 import CeramicCoatingPage from './pages/CeramicCoatingPage';
 import PaintCorrectionPage from './pages/PaintCorrectionPage';
-import MoldRemovalPage from './pages/MoldRemovalPage';
 import OfficialInfoPage from './pages/OfficialInfoPage';
 
 // Location Pages
@@ -44,7 +43,6 @@ const App: React.FC = () => {
           <Route path="/interior-restoration" element={<InteriorRestorationPage />} />
           <Route path="/ceramic-coating" element={<CeramicCoatingPage />} />
           <Route path="/paint-correction" element={<PaintCorrectionPage />} />
-          <Route path="/mold-removal" element={<MoldRemovalPage />} />
           <Route path="/official-info" element={<OfficialInfoPage />} />
           
           {/* Location Routes */}

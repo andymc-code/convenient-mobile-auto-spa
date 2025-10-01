@@ -23,3 +23,9 @@ export interface GalleryItem {
   after: string;
   title: string;
 }
+
+export interface Testimonial {
+  quote: string;
+  name: string;
+  location: string;
+}

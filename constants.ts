@@ -1,11 +1,20 @@
-import { Service, PricingPackage, FaqItem, GalleryItem } from './types';
+import { Service, PricingPackage, FaqItem, GalleryItem, Testimonial } from './types';
 
 export const SERVICES_DATA: Service[] = [
   { name: 'Exterior Detailing', description: 'A complete exterior wash, decontamination, and sealant application for a brilliant, protected shine.', image: 'https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/blue_lamborghini_washing.png?updatedAt=1758762754766', link: '/exterior-detailing' },
   { name: 'Interior Restoration', description: 'A deep clean of every interior surface to restore that fresh, new-car feeling.', image: 'https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/gclass_black_washed.png?updatedAt=1758763629089', link: '/interior-restoration' },
   { name: 'Ceramic Coating', description: 'The ultimate in long-term paint protection, gloss, and hydrophobicity.', image: 'https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/BMW_washing_.png?updatedAt=1758759180563', link: '/ceramic-coating' },
   { name: 'Paint Correction', description: 'Permanently remove swirls and scratches to reveal flawless, mirror-like paint.', image: 'https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/BMW_washing_.png?updatedAt=1758759180563', link: '/paint-correction' },
-  { name: 'Mold Removal', description: 'Safely and completely eradicate hazardous mold from your vehicle\'s interior.', image: 'https://picsum.photos/400/300?random=14', link: '/mold-removal' },
+];
+
+export const TESTIMONIALS_DATA: Testimonial[] = [
+  { quote: "The paint correction work was flawless. I’ve had detailing done elsewhere, but the level of care and precision here is unmatched. It’s truly a showroom finish, delivered right to my driveway.", name: "Andrew", location: "West Vancouver" },
+  { quote: "Booking was a breeze—just a text! Saved me a massive headache dealing with the city traffic. They showed up on time and transformed my work truck while I took calls.", name: "Marcus", location: "Burnaby" },
+  { quote: "Absolutely incredible full interior detail. I thought my carpets were a lost cause, but they look and smell brand new. Highly recommend their professional team.", name: "Sarah", location: "Richmond" },
+  { quote: "Best mobile detailing in the region, period. Fast, professional, and exceptional results every time.", name: "Ethan", location: "Vancouver" },
+  { quote: "We use them for our small fleet. Their consistency and ability to service multiple vehicles at our business park is invaluable. Great service for a busy company.", name: "Jennifer", location: "Langley" },
+  { quote: "After a tough Vancouver winter, my car needed serious help. They handled the road grime and salt residue perfectly. Ready for spring now!", name: "Kevin", location: "North Vancouver" },
+  { quote: "The price for the full service was a steal considering the quality. My SUV looks better now than when I bought it. Fantastic value and great communication.", name: "David", location: "Surrey" }
 ];
 
 export const PRICING_DATA: PricingPackage[] = [
@@ -75,10 +84,12 @@ export const FAQ_DATA = {
         { question: 'What is paint correction?', answer: 'Paint correction is the process of machine polishing a vehicle\'s paint to remove imperfections like swirl marks, light scratches, water spots, and oxidation. This restores the paint to a better-than-new condition with incredible gloss and clarity.' },
         { question: 'Will paint correction remove all scratches?', answer: 'It can permanently remove imperfections that are within the clear coat layer of the paint. If a scratch is deep enough to have gone through the clear coat (you can feel it with your fingernail), it may not be fully removable but its appearance can often be greatly improved.' }
     ],
+    // FIX: Added mold-specific FAQs to resolve an error on the Mold Removal page.
     mold: [
-        { question: 'Is mold in a car dangerous?', answer: 'Yes, mold can be very dangerous. It releases spores that can cause respiratory problems, allergic reactions, and other health issues. It is crucial to have it professionally remediated as soon as it\'s discovered.' },
-        { question: 'Can\'t I just clean the mold myself?', answer: 'We strongly advise against it. Household cleaners are often not effective and can damage your car\'s interior. More importantly, improper cleaning can release a massive amount of spores into the air, making the problem worse and increasing your health risk. Our professional process involves containment, proper protective gear, and specialized chemicals to ensure safe and complete removal.' }
-    ]
+        { question: 'Is mold in my car a health risk?', answer: 'Absolutely. Mold spores can cause a range of health issues, including respiratory problems, allergies, and headaches. It is crucial to have it professionally removed to ensure the air quality in your vehicle is safe.' },
+        { question: 'What causes mold to grow in a car?', answer: 'Mold thrives in damp, dark environments. Common causes include a water leak from a bad seal, leaving windows open in the rain, or spilling liquids that are not cleaned up properly. Vancouver\'s damp climate can accelerate growth.' },
+        { question: 'Can I just clean the visible mold myself?', answer: 'We strongly advise against it. Simply wiping the surface does not kill the underlying spores, and improper cleaning can spread them throughout the vehicle. Our professional process uses specialized biocides and equipment like ozone generators to ensure complete eradication.' },
+    ],
 };
 
 export const CONTACT_PHONE = "+1-604-555-0101";

@@ -56,7 +56,6 @@ const OfficialInfoPage: React.FC = () => {
                         <li>Interior Restoration</li>
                         <li>Ceramic Coating</li>
                         <li>Paint Correction</li>
-                        <li>Mold Removal</li>
                     </ul>
                 </section>
             </div>
