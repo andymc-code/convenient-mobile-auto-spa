@@ -103,7 +103,7 @@ export const FAQ_DATA = {
     ]
 };
 
-export const CONTACT_PHONE = "+1-604-555-0101";
+export const CONTACT_PHONE = "+1-778-251-5604";
 export const DEFAULT_WHATSAPP_MESSAGE = "Hi! I'd like to get a quote for mobile detailing.";
 
 export const getWhatsAppLink = (message: string): string => {

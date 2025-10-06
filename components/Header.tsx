@@ -42,15 +42,6 @@ const Header: React.FC = () => {
     }, []);
 
     useEffect(() => {
-        if (isMobileMenuOpen) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = 'unset';
-        }
-        return () => { document.body.style.overflow = 'unset'; };
-    }, [isMobileMenuOpen]);
-
-    useEffect(() => {
         // Close mobile menu on route change
         setIsMobileMenuOpen(false);
     }, [location.pathname]);
@@ -89,7 +80,7 @@ const Header: React.FC = () => {
                             <svg className={`w-4 h-4 ml-1 transform transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
                         {isServicesOpen && (
-                            <div className="absolute top-full mt-3 w-56 bg-brand-surface rounded-md shadow-xl py-2 border border-brand-border">
+                            <div className="absolute top-full mt-3 w-56 bg-brand-surface/95 backdrop-blur-md rounded-md shadow-xl py-2 border border-brand-border">
                                 {SERVICES_DATA.map(service => (
                                     <Link key={service.name} to={service.link} onClick={closeAllDesktopDropdowns} className="block px-4 py-2 text-sm text-brand-text-secondary hover:bg-brand-border hover:text-brand-text-primary transition-colors">
                                         {service.name}
@@ -104,7 +95,7 @@ const Header: React.FC = () => {
                             <svg className={`w-4 h-4 ml-1 transform transition-transform duration-300 ${isLocationsOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
                         {isLocationsOpen && (
-                            <div className="absolute top-full mt-3 w-56 bg-brand-surface rounded-md shadow-xl py-2 border border-brand-border">
+                            <div className="absolute top-full mt-3 w-56 bg-brand-surface/95 backdrop-blur-md rounded-md shadow-xl py-2 border border-brand-border">
                                 {LOCATIONS_DATA.map(location => (
                                     <Link key={location.name} to={location.path} onClick={closeAllDesktopDropdowns} className="block px-4 py-2 text-sm text-brand-text-secondary hover:bg-brand-border hover:text-brand-text-primary transition-colors">
                                         {location.name}
@@ -122,24 +113,20 @@ const Header: React.FC = () => {
 
                 {/* Mobile Navigation Button */}
                 <div className="md:hidden">
-                    <button onClick={() => setIsMobileMenuOpen(true)} aria-label="Open navigation menu">
-                        <MenuIcon />
+                    <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-label="Toggle navigation menu">
+                        {isMobileMenuOpen ? <CloseIcon /> : <MenuIcon />}
                     </button>
                 </div>
             </div>
             
-            {/* Mobile Menu Overlay */}
-            {isMobileMenuOpen && (
-                <div className="fixed inset-0 bg-brand-dark-bg z-50 flex flex-col p-6 md:hidden transition-opacity duration-300 ease-in-out" style={{opacity: 1}}>
-                    <div className="flex justify-between items-center mb-10">
-                         <Link to="/" className="flex items-center">
-                            <img src={LOGO_URL} alt="Convenient Car Spa Logo" className="h-12 w-auto" />
-                        </Link>
-                        <button onClick={() => setIsMobileMenuOpen(false)} aria-label="Close navigation menu">
-                            <CloseIcon />
-                        </button>
-                    </div>
-                    <nav className="flex flex-col flex-grow space-y-2 text-2xl font-display text-center uppercase tracking-widest">
+            {/* Mobile Menu Dropdown */}
+            <div className={`
+                absolute top-full left-0 w-full bg-brand-dark-bg border-b border-brand-border md:hidden
+                transition-all duration-300 ease-in-out overflow-y-auto
+                ${isMobileMenuOpen ? 'max-h-[calc(100vh-88px)] opacity-100' : 'max-h-0 opacity-0'}
+            `}>
+                <div className="p-6">
+                    <nav className="flex flex-col space-y-2 text-xl font-display text-center uppercase tracking-widest">
                         <Link to="/" className="py-3 text-brand-text-secondary hover:text-brand-text-primary transition-colors">Home</Link>
                         
                         <div>
@@ -148,9 +135,9 @@ const Header: React.FC = () => {
                                 <svg className={`w-5 h-5 ml-2 transform transition-transform duration-300 ${isMobileServicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
                             </button>
                             {isMobileServicesOpen && (
-                                <div className="flex flex-col items-center py-2 mt-2 font-sans normal-case text-base tracking-normal">
+                                <div className="bg-brand-surface/50 rounded-lg mx-8 my-2 py-2 font-sans normal-case text-base tracking-normal">
                                     {SERVICES_DATA.map(service => (
-                                        <Link key={service.name} to={service.link} className="w-full text-center py-2 text-brand-text-secondary hover:text-brand-text-primary">
+                                        <Link key={service.name} to={service.link} className="block w-full text-center py-2 text-brand-text-secondary hover:text-brand-text-primary">
                                             {service.name}
                                         </Link>
                                     ))}
@@ -163,9 +150,9 @@ const Header: React.FC = () => {
                                 <svg className={`w-5 h-5 ml-2 transform transition-transform duration-300 ${isMobileLocationsOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
                             </button>
                             {isMobileLocationsOpen && (
-                                <div className="flex flex-col items-center py-2 mt-2 font-sans normal-case text-base tracking-normal">
+                                <div className="bg-brand-surface/50 rounded-lg mx-8 my-2 py-2 font-sans normal-case text-base tracking-normal">
                                     {LOCATIONS_DATA.map(location => (
-                                        <Link key={location.name} to={location.path} className="w-full text-center py-2 text-brand-text-secondary hover:text-brand-text-primary">
+                                        <Link key={location.name} to={location.path} className="block w-full text-center py-2 text-brand-text-secondary hover:text-brand-text-primary">
                                             {location.name}
                                         </Link>
                                     ))}
@@ -176,11 +163,11 @@ const Header: React.FC = () => {
                         <Link to="/#gallery" onClick={(e) => handleScrollLink(e, '/#gallery')} className="py-3 text-brand-text-secondary hover:text-brand-text-primary transition-colors">Gallery</Link>
                         <Link to="/#pricing" onClick={(e) => handleScrollLink(e, '/#pricing')} className="py-3 text-brand-text-secondary hover:text-brand-text-primary transition-colors">Pricing</Link>
                     </nav>
-                     <a href={getWhatsAppLink(DEFAULT_WHATSAPP_MESSAGE)} target="_blank" rel="noopener noreferrer" className="bg-brand-accent text-brand-dark-bg w-full text-center font-bold font-display uppercase tracking-widest py-4 px-4 mt-8 rounded-md hover:opacity-90 transition-all duration-300">
+                     <a href={getWhatsAppLink(DEFAULT_WHATSAPP_MESSAGE)} target="_blank" rel="noopener noreferrer" className="bg-brand-accent text-brand-dark-bg w-full text-center block font-bold font-display uppercase tracking-widest py-4 px-4 mt-8 rounded-md hover:opacity-90 transition-all duration-300">
                         Book Now
                     </a>
                 </div>
-            )}
+            </div>
         </header>
     );
 };
