@@ -15,7 +15,7 @@ const ExteriorDetailingPage: React.FC = () => {
     
     return (
         <div className="bg-brand-dark-bg">
-            <div className="relative h-72 bg-cover bg-center" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=2670&auto=format&fit=crop')` }}>
+            <div className="relative h-72 bg-cover bg-center" style={{ backgroundImage: `url('https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/blue_lamborghini_washing.png?updatedAt=1758762754766')` }}>
                 <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center text-center">
                     <h1 className="text-4xl md:text-6xl font-extrabold font-display text-white uppercase tracking-wider">Exterior Detailing</h1>
                     <p className="text-brand-text-secondary mt-2 text-lg max-w-2xl">Restoring a brilliant, protected finish to your vehicle's paint, glass, and wheels.</p>
@@ -52,7 +52,7 @@ const ExteriorDetailingPage: React.FC = () => {
                         </a>
                     </div>
                     <div className="lg:col-span-2">
-                        <img src="https://images.unsplash.com/photo-1605165932572-c155c5c64eda?q=80&w=2574&auto=format&fit=crop" alt="Car exterior being detailed" className="rounded-lg shadow-xl object-cover h-full w-full" />
+                        <img src="https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/ford_raptor_after_exterior_detail.png?updatedAt=1759708679669" alt="Ford Raptor with a clean exterior" className="rounded-lg shadow-xl object-cover h-full w-full" />
                     </div>
                 </div>
 

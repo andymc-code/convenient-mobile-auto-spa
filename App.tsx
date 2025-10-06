@@ -9,6 +9,8 @@ import InteriorRestorationPage from './pages/InteriorRestorationPage';
 import CeramicCoatingPage from './pages/CeramicCoatingPage';
 import PaintCorrectionPage from './pages/PaintCorrectionPage';
 import OfficialInfoPage from './pages/OfficialInfoPage';
+import BlackTrimRestorationPage from './pages/BlackTrimRestorationPage';
+import OdorEliminationPage from './pages/OdorEliminationPage';
 
 // Location Pages
 import VancouverPage from './pages/locations/VancouverPage';
@@ -43,6 +45,8 @@ const App: React.FC = () => {
           <Route path="/interior-restoration" element={<InteriorRestorationPage />} />
           <Route path="/ceramic-coating" element={<CeramicCoatingPage />} />
           <Route path="/paint-correction" element={<PaintCorrectionPage />} />
+          <Route path="/black-trim-restoration" element={<BlackTrimRestorationPage />} />
+          <Route path="/odor-elimination" element={<OdorEliminationPage />} />
           <Route path="/official-info" element={<OfficialInfoPage />} />
           
           {/* Location Routes */}

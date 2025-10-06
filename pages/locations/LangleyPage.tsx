@@ -13,7 +13,7 @@ const LangleyPage: React.FC = () => {
       metaTitle="Mobile Car Detailing in Langley | Convenient Car Spa"
       metaDescription="Convenient Car Spa brings professional mobile auto detailing to Langley, BC. Serving Walnut Grove, Fort Langley, and more. We specialize in family vehicle cleaning. Book today!"
       h1="Mobile Car Detailing in Langley"
-      imageUrl="https://picsum.photos/1200/400?random=55"
+      imageUrl="https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/langley_location_img.jpg?updatedAt=1759733031041"
       geo={{ latitude: '49.1042', longitude: '-122.5834' }}
     >
         <div className="space-y-6 text-lg">

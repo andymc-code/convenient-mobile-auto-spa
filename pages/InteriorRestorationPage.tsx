@@ -15,7 +15,7 @@ const InteriorRestorationPage: React.FC = () => {
     
     return (
         <div className="bg-brand-dark-bg">
-            <div className="relative h-72 bg-cover bg-center" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1551522435-a131bf534d4b?q=80&w=2670&auto=format&fit=crop')` }}>
+            <div className="relative h-72 bg-cover bg-center" style={{ backgroundImage: `url('https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/jeep_after_detail.png?updatedAt=1759629189923')` }}>
                 <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center text-center">
                     <h1 className="text-4xl md:text-6xl font-extrabold font-display text-white uppercase tracking-wider">Interior Restoration</h1>
                     <p className="text-brand-text-secondary mt-2 text-lg max-w-2xl">Deep cleaning and sanitization for a factory-fresh feel and a healthier drive.</p>
@@ -52,7 +52,7 @@ const InteriorRestorationPage: React.FC = () => {
                         </a>
                     </div>
                     <div className="lg:col-span-2">
-                        <img src="https://images.unsplash.com/photo-1617105522332-9585b467064d?q=80&w=2574&auto=format&fit=crop" alt="Clean car interior" className="rounded-lg shadow-xl object-cover h-full w-full" />
+                        <img src="https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/Interior%20Restoration_card.png" alt="Before and after of a deep cleaned car seat" className="rounded-lg shadow-xl object-cover h-full w-full" />
                     </div>
                 </div>
 

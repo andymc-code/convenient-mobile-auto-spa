@@ -15,7 +15,7 @@ const CeramicCoatingPage: React.FC = () => {
 
     return (
         <div className="bg-brand-dark-bg">
-            <div className="relative h-72 bg-cover bg-center" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1617886321285-1d4a3e3d7c3c?q=80&w=2670&auto=format&fit=crop')` }}>
+            <div className="relative h-72 bg-cover bg-center" style={{ backgroundImage: `url('https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/Blur_bmwm4_ceramiccoated.png?updatedAt=1759719374116')` }}>
                 <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center text-center">
                     <h1 className="text-4xl md:text-6xl font-extrabold font-display text-white uppercase tracking-wider">Ceramic Coating</h1>
                     <p className="text-brand-text-secondary mt-2 text-lg max-w-2xl">The ultimate in long-term paint protection, gloss, and hydrophobicity.</p>
@@ -52,7 +52,7 @@ const CeramicCoatingPage: React.FC = () => {
                         </a>
                     </div>
                     <div className="lg:col-span-2">
-                        <img src="https://images.unsplash.com/photo-1616422285623-13ff0162193c?q=80&w=2574&auto=format&fit=crop" alt="Water beading on a ceramic coated car" className="rounded-lg shadow-xl object-cover h-full w-full" />
+                        <img src="https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/m4_after_hydro.png?updatedAt=1759630759462" alt="Water beading on a ceramic coated car" className="rounded-lg shadow-xl object-cover h-full w-full" />
                     </div>
                 </div>
 

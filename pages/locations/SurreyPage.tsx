@@ -13,7 +13,7 @@ const SurreyPage: React.FC = () => {
       metaTitle="Mobile Car Detailing in Surrey | Convenient Car Spa"
       metaDescription="Convenient Car Spa is Surrey's #1 mobile auto detailing service. We serve South Surrey, Guildford, and all of Surrey. Family-friendly interior cleaning at your home. Book now!"
       h1="Mobile Car Detailing in Surrey"
-      imageUrl="https://picsum.photos/1200/400?random=54"
+      imageUrl="https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/city_centre_aerial_cityscape_our_communities.jpg?updatedAt=1759732860459"
       geo={{ latitude: '49.1913', longitude: '-122.8490' }}
     >
         <div className="space-y-6 text-lg">

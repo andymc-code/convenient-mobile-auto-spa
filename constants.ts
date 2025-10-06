@@ -2,9 +2,11 @@ import { Service, PricingPackage, FaqItem, GalleryItem, Testimonial } from './ty
 
 export const SERVICES_DATA: Service[] = [
   { name: 'Exterior Detailing', description: 'A complete exterior wash, decontamination, and sealant application for a brilliant, protected shine.', image: 'https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/blue_lamborghini_washing.png?updatedAt=1758762754766', link: '/exterior-detailing' },
-  { name: 'Interior Restoration', description: 'A deep clean of every interior surface to restore that fresh, new-car feeling.', image: 'https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/gclass_black_washed.png?updatedAt=1758763629089', link: '/interior-restoration' },
-  { name: 'Ceramic Coating', description: 'The ultimate in long-term paint protection, gloss, and hydrophobicity.', image: 'https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/BMW_washing_.png?updatedAt=1758759180563', link: '/ceramic-coating' },
-  { name: 'Paint Correction', description: 'Permanently remove swirls and scratches to reveal flawless, mirror-like paint.', image: 'https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/BMW_washing_.png?updatedAt=1758759180563', link: '/paint-correction' },
+  { name: 'Interior Restoration', description: 'A deep clean of every interior surface to restore that fresh, new-car feeling.', image: 'https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/Interior%20Restoration_card.png', link: '/interior-restoration' },
+  { name: 'Ceramic Coating', description: 'The ultimate in long-term paint protection, gloss, and hydrophobicity.', image: 'https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/Blur_bmwm4_ceramiccoated.png?updatedAt=1759719374116', link: '/ceramic-coating' },
+  { name: 'Paint Correction', description: 'Permanently remove swirls and scratches to reveal flawless, mirror-like paint.', image: 'https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/yellow_lambo.png', link: '/paint-correction' },
+  { name: 'Black Trim Restoration', description: 'Restores faded, graying plastic trim to a deep, factory-fresh black finish.', image: 'https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/Black_Trim_Restoration.png', link: '/black-trim-restoration' },
+  { name: 'Odor Elimination', description: 'Permanently remove stubborn odors from smoke, pets, or mildew with our deep clean and ozone treatment.', image: 'https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/Odor_Elimination.png', link: '/odor-elimination' },
 ];
 
 export const TESTIMONIALS_DATA: Testimonial[] = [
@@ -58,10 +60,10 @@ export const PRICING_DATA: PricingPackage[] = [
 ];
 
 export const GALLERY_DATA: GalleryItem[] = [
-  { before: 'https://picsum.photos/800/600?random=1', after: 'https://picsum.photos/800/600?random=2', title: 'Swirl Removal & Gloss Enhancement' },
-  { before: 'https://picsum.photos/800/600?random=3', after: 'https://picsum.photos/800/600?random=4', title: 'Full Interior Restoration' },
-  { before: 'https://picsum.photos/800/600?random=5', after: 'https://picsum.photos/800/600?random=6', title: 'Ceramic Coating Hydrophobics' },
-  { before: 'https://picsum.photos/800/600?random=7', after: 'https://picsum.photos/800/600?random=8', title: 'Engine Bay Degreasing' },
+  { before: 'https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/911_before_detail.png', after: 'https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/911_after_detail.png', title: 'Swirl Removal & Gloss Enhancement' },
+  { before: 'https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/jeep_before_detail.png?updatedAt=1759629190001', after: 'https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/jeep_after_detail.png?updatedAt=1759629189923', title: 'Full Interior Restoration' },
+  { before: 'https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/m4_before_hydro.png?updatedAt=1759630759476', after: 'https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/m4_after_hydro.png?updatedAt=1759630759462', title: 'Ceramic Coating Hydrophobics' },
+  { before: 'https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/ford_raptor_before_exterior_detail.png?updatedAt=1759708679838', after: 'https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/ford_raptor_after_exterior_detail.png?updatedAt=1759708679669', title: 'Premium Exterior Detail' },
 ];
 
 export const FAQ_DATA = {
@@ -84,12 +86,21 @@ export const FAQ_DATA = {
         { question: 'What is paint correction?', answer: 'Paint correction is the process of machine polishing a vehicle\'s paint to remove imperfections like swirl marks, light scratches, water spots, and oxidation. This restores the paint to a better-than-new condition with incredible gloss and clarity.' },
         { question: 'Will paint correction remove all scratches?', answer: 'It can permanently remove imperfections that are within the clear coat layer of the paint. If a scratch is deep enough to have gone through the clear coat (you can feel it with your fingernail), it may not be fully removable but its appearance can often be greatly improved.' }
     ],
-    // FIX: Added mold-specific FAQs to resolve an error on the Mold Removal page.
     mold: [
         { question: 'Is mold in my car a health risk?', answer: 'Absolutely. Mold spores can cause a range of health issues, including respiratory problems, allergies, and headaches. It is crucial to have it professionally removed to ensure the air quality in your vehicle is safe.' },
         { question: 'What causes mold to grow in a car?', answer: 'Mold thrives in damp, dark environments. Common causes include a water leak from a bad seal, leaving windows open in the rain, or spilling liquids that are not cleaned up properly. Vancouver\'s damp climate can accelerate growth.' },
         { question: 'Can I just clean the visible mold myself?', answer: 'We strongly advise against it. Simply wiping the surface does not kill the underlying spores, and improper cleaning can spread them throughout the vehicle. Our professional process uses specialized biocides and equipment like ozone generators to ensure complete eradication.' },
     ],
+    trim: [
+        { question: 'What causes black plastic trim to fade?', answer: 'The primary cause is prolonged exposure to ultraviolet (UV) rays from the sun, which breaks down the polymers in the plastic. Harsh car wash chemicals and road grime can also accelerate this process, leaving the trim looking gray and chalky.' },
+        { question: 'Is this a temporary dressing or a permanent fix?', answer: 'This is a restoration, not just a dressing. While dressings are often silicone-based, oily, and wash off quickly, our process deeply cleans the plastic and applies a semi-permanent dye that soaks into the material, restoring its original black color for many months or even years.'},
+        { question: 'Will the restored trim look shiny or greasy?', answer: 'No, our goal is a factory-fresh satin finish. The restored trim will look deep, rich, and black, not artificially shiny or greasy. It also dries to the touch and will not run in the rain.'}
+    ],
+    odor: [
+        { question: 'What is an ozone treatment?', answer: 'An ozone treatment involves using a professional ozone (O3) generator inside a sealed vehicle. Ozone is a highly reactive molecule that chemically neutralizes and destroys odor-causing bacteria, viruses, and other organic matter at its source, rather than just masking the smell.'},
+        { question: 'Is the process safe for my car and my health?', answer: 'Yes, it is completely safe for your vehicle\'s interior when performed by trained professionals. After the treatment, the vehicle is thoroughly aired out to allow the ozone to revert back to stable, breathable oxygen. The car will be perfectly safe to drive.'},
+        { question: 'What kinds of odors can you remove?', answer: 'Our two-step process of deep cleaning followed by an ozone treatment is highly effective against a wide range of stubborn odors, including cigarette and cannabis smoke, pet odors, spilled food or milk, and musty smells from mold or mildew.'},
+    ]
 };
 
 export const CONTACT_PHONE = "+1-604-555-0101";

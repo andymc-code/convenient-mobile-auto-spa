@@ -15,7 +15,7 @@ const PaintCorrectionPage: React.FC = () => {
 
     return (
         <div className="bg-brand-dark-bg">
-            <div className="relative h-72 bg-cover bg-center" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1612202663980-05a2853d4e47?q=80&w=2670&auto=format&fit=crop')` }}>
+            <div className="relative h-72 bg-cover bg-center" style={{ backgroundImage: `url('https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/yellow_lambo.png')` }}>
                 <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center text-center">
                     <h1 className="text-4xl md:text-6xl font-extrabold font-display text-white uppercase tracking-wider">Paint Correction</h1>
                     <p className="text-brand-text-secondary mt-2 text-lg max-w-2xl">Permanently removing swirls & scratches to reveal flawless, mirror-like paint.</p>
@@ -52,7 +52,7 @@ const PaintCorrectionPage: React.FC = () => {
                         </a>
                     </div>
                     <div className="lg:col-span-2">
-                        <img src="https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/BMW_washing_.png?updatedAt=1758759180563" alt="A car with a flawless, glossy finish after paint correction" className="rounded-lg shadow-xl object-cover h-full w-full" />
+                        <img src="https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/911_after_detail.png" alt="A car with a flawless, glossy finish after paint correction" className="rounded-lg shadow-xl object-cover h-full w-full" />
                     </div>
                 </div>
 

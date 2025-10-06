@@ -13,7 +13,7 @@ const BurnabyPage: React.FC = () => {
       metaTitle="Mobile Car Detailing in Burnaby | Convenient Car Spa"
       metaDescription="Convenient Car Spa delivers professional mobile auto detailing to Burnaby. Serving Metrotown, Brentwood, and Edmonds. Get a showroom shine at your home or office. Book now!"
       h1="Mobile Car Detailing in Burnaby"
-      imageUrl="https://picsum.photos/1200/400?random=51"
+      imageUrl="https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/dania-shaeeb-DBpyrJ1XOtI-unsplash.jpg?updatedAt=1759732297218"
       geo={{ latitude: '49.2488', longitude: '-122.9805' }}
     >
         <div className="space-y-6 text-lg">

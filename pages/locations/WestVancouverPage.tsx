@@ -13,7 +13,7 @@ const WestVancouverPage: React.FC = () => {
       metaTitle="Mobile Car Detailing in West Vancouver | Convenient Car Spa"
       metaDescription="Premium mobile auto detailing for luxury vehicles in West Vancouver. We serve Ambleside, Dundarave, and the British Properties. Ceramic coatings and paint correction at your home."
       h1="Mobile Car Detailing in West Vancouver"
-      imageUrl="https://picsum.photos/1200/400?random=53"
+      imageUrl="https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/matt-wang-dBp9dbQCh4Q-unsplash.jpg?updatedAt=1759732296928"
       geo={{ latitude: '49.3208', longitude: '-123.1424' }}
     >
         <div className="space-y-6 text-lg">

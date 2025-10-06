@@ -13,7 +13,7 @@ const VancouverPage: React.FC = () => {
       metaTitle="Mobile Car Detailing in Vancouver | Convenient Car Spa"
       metaDescription="Convenient Car Spa offers premium mobile auto detailing and car wash services in Vancouver. We come to you in Yaletown, Kitsilano, or Downtown. Book today!"
       h1="Mobile Car Detailing in Vancouver"
-      imageUrl="https://picsum.photos/1200/400?random=50"
+      imageUrl="https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/matt-wang-dBp9dbQCh4Q-unsplash.jpg?updatedAt=1759732296928"
       geo={{ latitude: '49.2827', longitude: '-123.1207' }}
     >
         <div className="space-y-6 text-lg">

@@ -13,7 +13,7 @@ const RichmondPage: React.FC = () => {
       metaTitle="Mobile Car Detailing in Richmond | Convenient Car Spa"
       metaDescription="Top-rated mobile car detailing and wash services in Richmond, BC. We serve Steveston, City Centre, and more. Protect your car from salt spray. Book your at-home service!"
       h1="Mobile Car Detailing in Richmond"
-      imageUrl="https://picsum.photos/1200/400?random=52"
+      imageUrl="https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/matt-wang-dBp9dbQCh4Q-unsplash.jpg?updatedAt=1759732296928"
       geo={{ latitude: '49.1666', longitude: '-123.1336' }}
     >
         <div className="space-y-6 text-lg">

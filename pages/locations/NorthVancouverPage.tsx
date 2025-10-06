@@ -13,7 +13,7 @@ const NorthVancouverPage: React.FC = () => {
       metaTitle="Mobile Car Detailing in North Vancouver | Convenient Car Spa"
       metaDescription="Get professional mobile car detailing on the North Shore. Convenient Car Spa serves Lonsdale, Edgemont, and all of North Vancouver. We remove tree sap and trail grime. Book now!"
       h1="Mobile Car Detailing in North Vancouver"
-      imageUrl="https://picsum.photos/1200/400?random=56"
+      imageUrl="https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/priscilla-du-preez-Vm0nC-VKFTc-unsplash.jpg?updatedAt=1759732298519"
       geo={{ latitude: '49.3167', longitude: '-123.0667' }}
     >
         <div className="space-y-6 text-lg">
