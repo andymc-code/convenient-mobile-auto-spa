@@ -18,7 +18,7 @@ const HeroSection: React.FC = () => {
                     Delivered with <span className="text-brand-accent">Convenience.</span>
                 </h2>
                 <p className="text-lg md:text-xl max-w-3xl mx-auto mb-10 text-brand-text-secondary">
-                    We bring a meticulous, spa-quality detailing experience directly to your home or office in Vancouver. Your vehicle deserves the best, on your schedule.
+                    We bring a meticulous, spa-quality detailing experience directly to your home or office in Metro Vancouver. Your vehicle deserves the best, on your schedule.
                 </p>
                 <a 
                     href={getWhatsAppLink(DEFAULT_WHATSAPP_MESSAGE)} 

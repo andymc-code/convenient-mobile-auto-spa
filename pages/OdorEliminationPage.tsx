@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import FaqAccordion from '../components/FaqAccordion';
 import Breadcrumb from '../components/Breadcrumb';
 import { FAQ_DATA, getWhatsAppLink } from '../constants';
@@ -11,7 +11,56 @@ const CheckIcon = () => (
 );
 
 const OdorEliminationPage: React.FC = () => {
-    usePageMetadata('Car Odor Elimination Vancouver | Convenient Car Spa', 'Permanently remove smoke, pet, and mildew odors from your car with our mobile ozone treatment service in Vancouver. Breathe easy again!');
+    const pageTitle = 'Car Odor Elimination Vancouver | Convenient Car Spa';
+    const pageDescription = 'Permanently remove smoke, pet, and mildew odors from your car with our mobile ozone treatment service in Vancouver. Breathe easy again!';
+    usePageMetadata(pageTitle, pageDescription);
+
+    useEffect(() => {
+        // Service Schema
+        const serviceSchema = {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Automotive Odor Elimination & Ozone Treatment",
+            "description": pageDescription,
+            "provider": {
+                "@type": "AutoDetailing",
+                "name": "Convenient Car Spa"
+            },
+            "areaServed": {
+                "@type": "GeoCircle",
+                "geoMidpoint": { "@type": "GeoCoordinates", "latitude": "49.2827", "longitude": "-123.1207" },
+                "geoRadius": "30000"
+            },
+            "url": window.location.href
+        };
+        const serviceScript = document.createElement('script');
+        serviceScript.type = 'application/ld+json';
+        serviceScript.id = 'service-schema';
+        serviceScript.innerHTML = JSON.stringify(serviceSchema);
+        document.head.appendChild(serviceScript);
+
+        // FAQ Schema
+        const faqItems = FAQ_DATA.odor;
+        const faqSchema = {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqItems.map(item => ({
+                "@type": "Question",
+                "name": item.question,
+                "acceptedAnswer": { "@type": "Answer", "text": item.answer }
+            }))
+        };
+        const faqScript = document.createElement('script');
+        faqScript.type = 'application/ld+json';
+        faqScript.id = 'faq-schema';
+        faqScript.innerHTML = JSON.stringify(faqSchema);
+        document.head.appendChild(faqScript);
+        
+        return () => {
+            document.getElementById('service-schema')?.remove();
+            document.getElementById('faq-schema')?.remove();
+        };
+    }, [pageDescription]);
 
     return (
         <div className="bg-brand-dark-bg">

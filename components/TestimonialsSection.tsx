@@ -26,6 +26,7 @@ const TestimonialsSection: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold font-display uppercase text-brand-text-primary">Client Reviews</h2>
+          <p className="text-brand-text-secondary mt-4 max-w-2xl mx-auto">Hear from our satisfied customers across Metro Vancouver.</p>
         </div>
         
         {/* Desktop: Auto-scrolling carousel */}

@@ -11,6 +11,9 @@ import PaintCorrectionPage from './pages/PaintCorrectionPage';
 import OfficialInfoPage from './pages/OfficialInfoPage';
 import BlackTrimRestorationPage from './pages/BlackTrimRestorationPage';
 import OdorEliminationPage from './pages/OdorEliminationPage';
+import MoldRemovalPage from './pages/MoldRemovalPage';
+import FleetDetailingPage from './pages/FleetDetailingPage';
+import DeepInteriorShampooPage from './pages/DeepInteriorShampooPage';
 
 // Location Pages
 import VancouverPage from './pages/locations/VancouverPage';
@@ -43,10 +46,13 @@ const App: React.FC = () => {
           <Route path="/booking" element={<BookingPage />} />
           <Route path="/exterior-detailing" element={<ExteriorDetailingPage />} />
           <Route path="/interior-restoration" element={<InteriorRestorationPage />} />
+          <Route path="/deep-interior-shampoo" element={<DeepInteriorShampooPage />} />
           <Route path="/ceramic-coating" element={<CeramicCoatingPage />} />
           <Route path="/paint-correction" element={<PaintCorrectionPage />} />
           <Route path="/black-trim-restoration" element={<BlackTrimRestorationPage />} />
           <Route path="/odor-elimination" element={<OdorEliminationPage />} />
+          <Route path="/mold-removal" element={<MoldRemovalPage />} />
+          <Route path="/fleet-detailing" element={<FleetDetailingPage />} />
           <Route path="/official-info" element={<OfficialInfoPage />} />
           
           {/* Location Routes */}

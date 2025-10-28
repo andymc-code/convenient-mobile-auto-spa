@@ -10,9 +10,9 @@ const CheckIcon = () => (
     </svg>
 );
 
-const ExteriorDetailingPage: React.FC = () => {
-    const pageTitle = 'Exterior Car Detailing Vancouver | Convenient Car Spa';
-    const pageDescription = 'Our mobile exterior detailing service for Vancouver includes a meticulous hand wash, paint decontamination, and durable sealant to restore your car\'s brilliant finish at your location.';
+const DeepInteriorShampooPage: React.FC = () => {
+    const pageTitle = 'Deep Interior Shampoo Service Vancouver | Convenient Car Spa';
+    const pageDescription = 'Revitalize your car\'s interior with our mobile deep shampoo service in Vancouver. We use hot water extraction to remove tough stains from carpets and seats.';
     usePageMetadata(pageTitle, pageDescription);
 
     useEffect(() => {
@@ -20,7 +20,7 @@ const ExteriorDetailingPage: React.FC = () => {
         const serviceSchema = {
             "@context": "https://schema.org",
             "@type": "Service",
-            "serviceType": "Exterior Car Detailing",
+            "serviceType": "Automotive Interior Shampoo & Hot Water Extraction",
             "description": pageDescription,
             "provider": {
                 "@type": "AutoDetailing",
@@ -40,7 +40,7 @@ const ExteriorDetailingPage: React.FC = () => {
         document.head.appendChild(serviceScript);
 
         // FAQ Schema
-        const faqItems = FAQ_DATA.general;
+        const faqItems = FAQ_DATA.shampoo;
         const faqSchema = {
             "@context": "https://schema.org",
             "@type": "FAQPage",
@@ -61,38 +61,37 @@ const ExteriorDetailingPage: React.FC = () => {
             document.getElementById('faq-schema')?.remove();
         };
     }, [pageDescription]);
-    
+
     return (
         <div className="bg-brand-dark-bg">
-            <div className="relative h-72 bg-cover bg-center" style={{ backgroundImage: `url('https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/blue_lamborghini_washing.png?updatedAt=1758762754766')` }}>
+            <div className="relative h-72 bg-cover bg-center" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1616422285923-45a7c244ab43?q=80&w=2670&auto=format&fit=crop')` }}>
                 <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center text-center">
-                    <h1 className="text-4xl md:text-6xl font-extrabold font-display text-white uppercase tracking-wider">Exterior Detailing</h1>
-                    <p className="text-brand-text-secondary mt-2 text-lg max-w-2xl">Restoring a brilliant, protected finish to your vehicle's paint, glass, and wheels.</p>
+                    <h1 className="text-4xl md:text-6xl font-extrabold font-display text-white uppercase tracking-wider">Deep Interior Shampoo</h1>
+                    <p className="text-brand-text-secondary mt-2 text-lg max-w-2xl">Lifting deep-seated dirt and stains from carpets and upholstery.</p>
                 </div>
             </div>
             <div className="container mx-auto px-6 py-16">
-                <div className="mb-8">
-                    <Breadcrumb paths={[{ name: 'Services', path: '/#services' }, { name: 'Exterior Detailing', path: '/exterior-detailing' }]} />
+                 <div className="mb-8">
+                    <Breadcrumb paths={[{ name: 'Services', path: '/#services' }, { name: 'Deep Interior Shampoo', path: '/deep-interior-shampoo' }]} />
                 </div>
 
                 <div className="grid lg:grid-cols-5 gap-12">
                     <div className="lg:col-span-3">
-                        <h2 className="text-3xl font-bold font-display text-white mb-4">A LUSTROUS, PROTECTED FINISH. DELIVERED.</h2>
+                        <h2 className="text-3xl font-bold font-display text-white mb-4">REVITALIZE YOUR FABRICS.</h2>
                         <p className="text-brand-text-secondary mb-6 leading-relaxed">
-                            Our exterior detailing is far more than a simple car wash; it's a comprehensive rejuvenation of your vehicle's most visible surfaces, brought directly to you. We meticulously remove embedded contaminants, restore true gloss and depth to the paint, and apply a durable layer of protection to keep your car looking its best while being shielded from Vancouver's harsh elements.
+                           Our Deep Interior Shampoo service focuses on what matters most: your carpets, mats, and fabric seats. Using professional-grade hot water extraction and specialized shampoos, we lift away years of ground-in dirt, spills, and tough stains, leaving your fabrics clean, fresh, and revitalized. It's the perfect solution for targeting specific problem areas or refreshing your vehicle's interior after a long season.
                         </p>
                         
-                        <h3 className="text-2xl font-semibold font-display text-white mt-10 mb-6">WHAT'S INCLUDED:</h3>
+                        <h3 className="text-2xl font-semibold font-display text-white mt-10 mb-6">OUR PROCESS INCLUDES:</h3>
                         <ul className="space-y-4 text-brand-text-secondary">
-                            <li className="flex items-center"><CheckIcon /><span>Foam Cannon Pre-wash & Gentle Hand Wash</span></li>
-                            <li className="flex items-center"><CheckIcon /><span>Paint Decontamination (Removes bonded contaminants)</span></li>
-                            <li className="flex items-center"><CheckIcon /><span>Wheels, Tires, and Wheel Wells Deep Cleaned</span></li>
-                            <li className="flex items-center"><CheckIcon /><span>Durable Paint Sealant Applied (Up to 6 months protection)</span></li>
-                            <li className="flex items-center"><CheckIcon /><span>Tires Dressed for a Satin, Non-Sling Finish</span></li>
-                            <li className="flex items-center"><CheckIcon /><span>Streak-Free Exterior Glass Cleaning</span></li>
+                           <li className="flex items-center"><CheckIcon /><span>Thorough Pre-Vacuuming of Fabric Surfaces</span></li>
+                            <li className="flex items-center"><CheckIcon /><span>Pre-Treatment of Spots & Stains</span></li>
+                            <li className="flex items-center"><CheckIcon /><span>Hot Water Extraction for Carpets & Mats</span></li>
+                            <li className="flex items-center"><CheckIcon /><span>Deep Shampooing of Fabric Upholstery Seats</span></li>
+                            <li className="flex items-center"><CheckIcon /><span>Deodorizing Treatment for a Fresh, Clean Scent</span></li>
                         </ul>
                          <a 
-                            href={getWhatsAppLink("Hi! I'm interested in booking an Exterior Detailing service.")} 
+                            href={getWhatsAppLink("Hi! I'm interested in the Deep Interior Shampoo service.")}
                             target="_blank" 
                             rel="noopener noreferrer" 
                             className="mt-10 inline-block bg-brand-accent text-brand-dark-bg font-bold py-3 px-8 rounded-md hover:opacity-90 transition-colors uppercase font-display tracking-widest"
@@ -101,17 +100,17 @@ const ExteriorDetailingPage: React.FC = () => {
                         </a>
                     </div>
                     <div className="lg:col-span-2">
-                        <img src="https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/ford_raptor_after_exterior_detail.png?updatedAt=1759708679669" alt="Ford Raptor with a clean exterior" className="rounded-lg shadow-xl object-cover h-full w-full" />
+                        <img src="https://images.unsplash.com/photo-1583600585315-779cf5b99a43?q=80&w=2574&auto=format&fit=crop" alt="Close up of a clean car seat fabric" className="rounded-lg shadow-xl object-cover h-full w-full" />
                     </div>
                 </div>
 
                 <div className="mt-24">
                     <h2 className="text-3xl font-bold font-display text-white text-center mb-10 uppercase">Frequently Asked Questions</h2>
-                    <FaqAccordion items={FAQ_DATA.general} />
+                    <FaqAccordion items={FAQ_DATA.shampoo} />
                 </div>
             </div>
         </div>
     );
 };
 
-export default ExteriorDetailingPage;
+export default DeepInteriorShampooPage;

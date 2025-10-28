@@ -10,9 +10,9 @@ const CheckIcon = () => (
     </svg>
 );
 
-const ExteriorDetailingPage: React.FC = () => {
-    const pageTitle = 'Exterior Car Detailing Vancouver | Convenient Car Spa';
-    const pageDescription = 'Our mobile exterior detailing service for Vancouver includes a meticulous hand wash, paint decontamination, and durable sealant to restore your car\'s brilliant finish at your location.';
+const FleetDetailingPage: React.FC = () => {
+    const pageTitle = 'Fleet Detailing Service Vancouver | Convenient Car Spa';
+    const pageDescription = 'Professional mobile fleet detailing for businesses in Vancouver. We service commercial vans, trucks, and cars on-site to maintain your brand image and protect your assets.';
     usePageMetadata(pageTitle, pageDescription);
 
     useEffect(() => {
@@ -20,7 +20,7 @@ const ExteriorDetailingPage: React.FC = () => {
         const serviceSchema = {
             "@context": "https://schema.org",
             "@type": "Service",
-            "serviceType": "Exterior Car Detailing",
+            "serviceType": "Commercial Fleet Detailing",
             "description": pageDescription,
             "provider": {
                 "@type": "AutoDetailing",
@@ -40,7 +40,7 @@ const ExteriorDetailingPage: React.FC = () => {
         document.head.appendChild(serviceScript);
 
         // FAQ Schema
-        const faqItems = FAQ_DATA.general;
+        const faqItems = FAQ_DATA.fleet;
         const faqSchema = {
             "@context": "https://schema.org",
             "@type": "FAQPage",
@@ -61,57 +61,58 @@ const ExteriorDetailingPage: React.FC = () => {
             document.getElementById('faq-schema')?.remove();
         };
     }, [pageDescription]);
-    
+
+
     return (
         <div className="bg-brand-dark-bg">
-            <div className="relative h-72 bg-cover bg-center" style={{ backgroundImage: `url('https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/blue_lamborghini_washing.png?updatedAt=1758762754766')` }}>
+            <div className="relative h-72 bg-cover bg-center" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1617015452627-4b933023a1a5?q=80&w=2670&auto=format&fit=crop')` }}>
                 <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center text-center">
-                    <h1 className="text-4xl md:text-6xl font-extrabold font-display text-white uppercase tracking-wider">Exterior Detailing</h1>
-                    <p className="text-brand-text-secondary mt-2 text-lg max-w-2xl">Restoring a brilliant, protected finish to your vehicle's paint, glass, and wheels.</p>
+                    <h1 className="text-4xl md:text-6xl font-extrabold font-display text-white uppercase tracking-wider">Fleet Detailing</h1>
+                    <p className="text-brand-text-secondary mt-2 text-lg max-w-2xl">Reliable & scalable mobile detailing for your business vehicles.</p>
                 </div>
             </div>
             <div className="container mx-auto px-6 py-16">
-                <div className="mb-8">
-                    <Breadcrumb paths={[{ name: 'Services', path: '/#services' }, { name: 'Exterior Detailing', path: '/exterior-detailing' }]} />
+                 <div className="mb-8">
+                    <Breadcrumb paths={[{ name: 'Services', path: '/#services' }, { name: 'Fleet Detailing', path: '/fleet-detailing' }]} />
                 </div>
 
                 <div className="grid lg:grid-cols-5 gap-12">
                     <div className="lg:col-span-3">
-                        <h2 className="text-3xl font-bold font-display text-white mb-4">A LUSTROUS, PROTECTED FINISH. DELIVERED.</h2>
+                        <h2 className="text-3xl font-bold font-display text-white mb-4">A CLEAN FLEET IS GOOD BUSINESS.</h2>
                         <p className="text-brand-text-secondary mb-6 leading-relaxed">
-                            Our exterior detailing is far more than a simple car wash; it's a comprehensive rejuvenation of your vehicle's most visible surfaces, brought directly to you. We meticulously remove embedded contaminants, restore true gloss and depth to the paint, and apply a durable layer of protection to keep your car looking its best while being shielded from Vancouver's harsh elements.
+                            Your company's vehicles are a mobile billboard for your brand. A clean, well-maintained fleet communicates professionalism and attention to detail. Our on-site fleet detailing service minimizes vehicle downtime and logistical headaches by bringing our expert team and equipment directly to your business location. We offer customizable maintenance plans to keep your fleet looking its best, protecting your assets and enhancing your brand's image.
                         </p>
                         
-                        <h3 className="text-2xl font-semibold font-display text-white mt-10 mb-6">WHAT'S INCLUDED:</h3>
+                        <h3 className="text-2xl font-semibold font-display text-white mt-10 mb-6">OUR FLEET SERVICES INCLUDE:</h3>
                         <ul className="space-y-4 text-brand-text-secondary">
-                            <li className="flex items-center"><CheckIcon /><span>Foam Cannon Pre-wash & Gentle Hand Wash</span></li>
-                            <li className="flex items-center"><CheckIcon /><span>Paint Decontamination (Removes bonded contaminants)</span></li>
-                            <li className="flex items-center"><CheckIcon /><span>Wheels, Tires, and Wheel Wells Deep Cleaned</span></li>
-                            <li className="flex items-center"><CheckIcon /><span>Durable Paint Sealant Applied (Up to 6 months protection)</span></li>
-                            <li className="flex items-center"><CheckIcon /><span>Tires Dressed for a Satin, Non-Sling Finish</span></li>
-                            <li className="flex items-center"><CheckIcon /><span>Streak-Free Exterior Glass Cleaning</span></li>
+                           <li className="flex items-center"><CheckIcon /><span>Scheduled Maintenance Washes (Weekly, Bi-weekly, Monthly)</span></li>
+                            <li className="flex items-center"><CheckIcon /><span>Comprehensive Interior & Exterior Detailing Packages</span></li>
+                            <li className="flex items-center"><CheckIcon /><span>Decal and Livery-Safe Cleaning Methods</span></li>
+                            <li className="flex items-center"><CheckIcon /><span>Interior Sanitization & Odor Removal for work vehicles</span></li>
+                            <li className="flex items-center"><CheckIcon /><span>Service for Fleets of Any Size (Cars, Vans, Trucks)</span></li>
+                            <li className="flex items-center"><CheckIcon /><span>Centralized Billing & Service Reporting</span></li>
                         </ul>
                          <a 
-                            href={getWhatsAppLink("Hi! I'm interested in booking an Exterior Detailing service.")} 
+                            href={getWhatsAppLink("Hi! I would like to get a quote for my business fleet.")}
                             target="_blank" 
                             rel="noopener noreferrer" 
                             className="mt-10 inline-block bg-brand-accent text-brand-dark-bg font-bold py-3 px-8 rounded-md hover:opacity-90 transition-colors uppercase font-display tracking-widest"
                         >
-                            Book This Service
+                            Request a Fleet Quote
                         </a>
                     </div>
                     <div className="lg:col-span-2">
-                        <img src="https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/ford_raptor_after_exterior_detail.png?updatedAt=1759708679669" alt="Ford Raptor with a clean exterior" className="rounded-lg shadow-xl object-cover h-full w-full" />
+                        <img src="https://images.unsplash.com/photo-1599599810624-91f13b15b399?q=80&w=2670&auto=format&fit=crop" alt="A clean white commercial van" className="rounded-lg shadow-xl object-cover h-full w-full" />
                     </div>
                 </div>
 
                 <div className="mt-24">
-                    <h2 className="text-3xl font-bold font-display text-white text-center mb-10 uppercase">Frequently Asked Questions</h2>
-                    <FaqAccordion items={FAQ_DATA.general} />
+                    <h2 className="text-3xl font-bold font-display text-white text-center mb-10 uppercase">Fleet Detailing FAQs</h2>
+                    <FaqAccordion items={FAQ_DATA.fleet} />
                 </div>
             </div>
         </div>
     );
 };
 
-export default ExteriorDetailingPage;
+export default FleetDetailingPage;

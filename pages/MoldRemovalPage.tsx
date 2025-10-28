@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import FaqAccordion from '../components/FaqAccordion';
 import Breadcrumb from '../components/Breadcrumb';
 import { FAQ_DATA, getWhatsAppLink } from '../constants';
@@ -11,7 +11,57 @@ const CheckIcon = () => (
 );
 
 const MoldRemovalPage: React.FC = () => {
-    usePageMetadata('Car Mold Removal Vancouver | Mobile Service | Convenient Car Spa', 'Expert mobile mold removal for vehicles in Vancouver. We safely eliminate hazardous mold from your car\'s interior, protecting your health.');
+    const pageTitle = 'Car Mold Removal Vancouver | Convenient Car Spa';
+    const pageDescription = 'Professional mobile mold removal service in Vancouver. We safely eradicate hazardous mold and spores from your vehicle, restoring a healthy cabin environment.';
+    usePageMetadata(pageTitle, pageDescription);
+
+    useEffect(() => {
+        // Service Schema
+        const serviceSchema = {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Automotive Mold Removal & Remediation",
+            "description": pageDescription,
+            "provider": {
+                "@type": "AutoDetailing",
+                "name": "Convenient Car Spa"
+            },
+            "areaServed": {
+                "@type": "GeoCircle",
+                "geoMidpoint": { "@type": "GeoCoordinates", "latitude": "49.2827", "longitude": "-123.1207" },
+                "geoRadius": "30000"
+            },
+            "url": window.location.href
+        };
+        const serviceScript = document.createElement('script');
+        serviceScript.type = 'application/ld+json';
+        serviceScript.id = 'service-schema';
+        serviceScript.innerHTML = JSON.stringify(serviceSchema);
+        document.head.appendChild(serviceScript);
+
+        // FAQ Schema
+        const faqItems = FAQ_DATA.mold;
+        const faqSchema = {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqItems.map(item => ({
+                "@type": "Question",
+                "name": item.question,
+                "acceptedAnswer": { "@type": "Answer", "text": item.answer }
+            }))
+        };
+        const faqScript = document.createElement('script');
+        faqScript.type = 'application/ld+json';
+        faqScript.id = 'faq-schema';
+        faqScript.innerHTML = JSON.stringify(faqSchema);
+        document.head.appendChild(faqScript);
+        
+        return () => {
+            document.getElementById('service-schema')?.remove();
+            document.getElementById('faq-schema')?.remove();
+        };
+    }, [pageDescription]);
+
 
     return (
         <div className="bg-brand-dark-bg">
@@ -22,37 +72,36 @@ const MoldRemovalPage: React.FC = () => {
                 </div>
             </div>
             <div className="container mx-auto px-6 py-16">
-                <div className="mb-8">
+                 <div className="mb-8">
                     <Breadcrumb paths={[{ name: 'Services', path: '/#services' }, { name: 'Mold Removal', path: '/mold-removal' }]} />
                 </div>
 
                 <div className="grid lg:grid-cols-5 gap-12">
                     <div className="lg:col-span-3">
-                        <h2 className="text-3xl font-bold font-display text-white mb-4">PROTECT YOUR HEALTH & YOUR VEHICLE.</h2>
+                        <h2 className="text-3xl font-bold font-display text-white mb-4">PROTECT YOUR HEALTH. RESTORE YOUR CAR.</h2>
                         <p className="text-brand-text-secondary mb-6 leading-relaxed">
-                           Mold growth in a vehicle is a serious health concern that requires professional remediation. Our mobile process doesn't just clean the visible spots; it eradicates the problem at its source. We bring specialized equipment, including HEPA vacuums and ozone generators, along with EPA-approved biocides to ensure your car's interior is returned to a safe and sanitary state.
+                            Discovering mold in your vehicle is more than just an unpleasant surprise—it's a significant health risk. Mold spores can circulate through your car's ventilation system, causing allergies and respiratory issues. Our mobile mold remediation service is a comprehensive process designed to safely and completely eliminate mold from your vehicle's interior, ensuring you and your passengers can breathe clean, healthy air again.
                         </p>
                         
-                        <h3 className="text-2xl font-semibold font-display text-white mt-10 mb-6">OUR REMEDIATION PROCESS:</h3>
+                        <h3 className="text-2xl font-semibold font-display text-white mt-10 mb-6">OUR MOLD REMEDIATION PROCESS:</h3>
                         <ul className="space-y-4 text-brand-text-secondary">
-                           <li className="flex items-center"><CheckIcon /><span>Full Interior Inspection and Assessment</span></li>
-                            <li className="flex items-center"><CheckIcon /><span>Containment to Prevent Spore Spread During Service</span></li>
-                            <li className="flex items-center"><CheckIcon /><span>Deep Cleaning and Disinfection of All Surfaces</span></li>
-                            <li className="flex items-center"><CheckIcon /><span>Ozone Treatment to Kill Spores and Eliminate Odors</span></li>
-                            <li className="flex items-center"><CheckIcon /><span>Replacement of Cabin Air Filter (Highly Recommended)</span></li>
-                            <li className="flex items-center"><CheckIcon /><span>Final Inspection to Ensure Complete Remediation</span></li>
+                           <li className="flex items-center"><CheckIcon /><span>Safety First: Use of PPE to contain spores during removal</span></li>
+                            <li className="flex items-center"><CheckIcon /><span>Deep Cleaning and Steam Treatment of all affected surfaces</span></li>
+                            <li className="flex items-center"><CheckIcon /><span>Application of a professional-grade, EPA-approved biocide</span></li>
+                            <li className="flex items-center"><CheckIcon /><span>Ozone treatment to kill any remaining airborne spores</span></li>
+                            <li className="flex items-center"><CheckIcon /><span>Final inspection to ensure complete eradication</span></li>
                         </ul>
                          <a 
-                            href={getWhatsAppLink("Hi! I need to book an urgent assessment for mold removal.")} 
+                            href={getWhatsAppLink("Hi! I have a mold problem in my car and need a quote for removal.")}
                             target="_blank" 
                             rel="noopener noreferrer" 
-                            className="mt-10 inline-block bg-red-600 text-white font-bold py-3 px-8 rounded-md hover:bg-red-700 transition-colors uppercase font-display tracking-widest"
+                            className="mt-10 inline-block bg-brand-accent text-brand-dark-bg font-bold py-3 px-8 rounded-md hover:opacity-90 transition-colors uppercase font-display tracking-widest"
                         >
-                            Book an Urgent Assessment
+                            Request an Evaluation
                         </a>
                     </div>
                     <div className="lg:col-span-2">
-                        <img src="https://images.unsplash.com/photo-1580251744136-5a5c64486620?q=80&w=2574&auto=format&fit=crop" alt="Technician in protective gear cleaning car interior" className="rounded-lg shadow-xl object-cover h-full w-full" />
+                        <img src="https://ik.imagekit.io/wnwu0xxx5/Auto_detailing/Interior%20Restoration_card.png" alt="A clean and restored car interior" className="rounded-lg shadow-xl object-cover h-full w-full" />
                     </div>
                 </div>
 

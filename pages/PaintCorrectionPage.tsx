@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import FaqAccordion from '../components/FaqAccordion';
 import Breadcrumb from '../components/Breadcrumb';
 import { FAQ_DATA, getWhatsAppLink } from '../constants';
@@ -11,7 +11,56 @@ const CheckIcon = () => (
 );
 
 const PaintCorrectionPage: React.FC = () => {
-    usePageMetadata('Mobile Paint Correction Vancouver | Convenient Car Spa', 'Remove swirls and scratches with our mobile paint correction service in Vancouver. We restore your paint\'s clarity and gloss at your home or office.');
+    const pageTitle = 'Mobile Paint Correction Vancouver | Convenient Car Spa';
+    const pageDescription = 'Remove swirls and scratches with our mobile paint correction service in Vancouver. We restore your paint\'s clarity and gloss at your home or office.';
+    usePageMetadata(pageTitle, pageDescription);
+
+    useEffect(() => {
+        // Service Schema
+        const serviceSchema = {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Automotive Paint Correction",
+            "description": pageDescription,
+            "provider": {
+                "@type": "AutoDetailing",
+                "name": "Convenient Car Spa"
+            },
+            "areaServed": {
+                "@type": "GeoCircle",
+                "geoMidpoint": { "@type": "GeoCoordinates", "latitude": "49.2827", "longitude": "-123.1207" },
+                "geoRadius": "30000"
+            },
+            "url": window.location.href
+        };
+        const serviceScript = document.createElement('script');
+        serviceScript.type = 'application/ld+json';
+        serviceScript.id = 'service-schema';
+        serviceScript.innerHTML = JSON.stringify(serviceSchema);
+        document.head.appendChild(serviceScript);
+
+        // FAQ Schema
+        const faqItems = FAQ_DATA.paint;
+        const faqSchema = {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqItems.map(item => ({
+                "@type": "Question",
+                "name": item.question,
+                "acceptedAnswer": { "@type": "Answer", "text": item.answer }
+            }))
+        };
+        const faqScript = document.createElement('script');
+        faqScript.type = 'application/ld+json';
+        faqScript.id = 'faq-schema';
+        faqScript.innerHTML = JSON.stringify(faqSchema);
+        document.head.appendChild(faqScript);
+        
+        return () => {
+            document.getElementById('service-schema')?.remove();
+            document.getElementById('faq-schema')?.remove();
+        };
+    }, [pageDescription]);
 
     return (
         <div className="bg-brand-dark-bg">

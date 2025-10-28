@@ -30,7 +30,7 @@ const WHY_CHOOSE_US_DATA = [
     {
         icon: <IconConvenience />,
         title: "Unmatched Convenience",
-        description: "We bring the complete detailing spa to your doorstep. No travel, no waiting rooms—just exceptional service where you are."
+        description: "We bring the complete detailing spa to your doorstep anywhere in Metro Vancouver. No travel, no waiting rooms—just exceptional service where you are."
     },
     {
         icon: <IconQuality />,

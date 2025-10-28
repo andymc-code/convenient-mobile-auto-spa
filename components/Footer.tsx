@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
                         <div className="flex items-center mb-4">
                              <img src={LOGO_URL} alt="Convenient Car Spa Logo" className="h-[60px] w-auto" />
                         </div>
-                        <p className="text-brand-text-secondary text-sm">Vancouver's premier mobile auto detailing service. We bring the spa to you.</p>
+                        <p className="text-brand-text-secondary text-sm">Metro Vancouver's premier mobile auto detailing service. We bring the spa to you.</p>
                     </div>
                     <div>
                         <h3 className="text-sm font-semibold text-brand-text-primary uppercase tracking-wider mb-4">Our Services</h3>
@@ -36,14 +36,14 @@ const Footer: React.FC = () => {
                         <ul className="space-y-2 text-brand-text-secondary text-sm">
                             <li>contact@convenientcarspa.com</li>
                             <li>{CONTACT_PHONE}</li>
-                            <li>Serving Vancouver & The Lower Mainland</li>
+                            <li>Serving Metro Vancouver & The Lower Mainland</li>
                         </ul>
                     </div>
                 </div>
                 <div className="mt-12 border-t border-brand-border pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
                     <p className="text-brand-text-secondary/50">&copy; {new Date().getFullYear()} Convenient Car Spa. All Rights Reserved.</p>
                      <p className="text-brand-text-secondary/50 mt-4 md:mt-0">
-                       <Link to="/official-info" className="hover:text-brand-accent">Official Info</Link>
+                       <Link to="/official-info" className="hover:text-brand-accent">Official Info for AI</Link>
                     </p>
                 </div>
             </div>
